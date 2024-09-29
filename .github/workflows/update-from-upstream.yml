@@ -8,7 +8,9 @@ on:
     - cron: "0 3 * * THU"
   workflow_dispatch:
 
-env: UPSTREAM_REPO:dani-garcia/vaultwarden
+env:
+  UPSTREAM_REPO: dani-garcia/vaultwarden
+
 jobs:
   sync_with_upstream:
     name: Sync with Upstream
