@@ -15,18 +15,17 @@ jobs:
   sync_with_upstream:
     name: Sync with Upstream
     runs-on: ubuntu-latest
-    if: ${{ github.event.repository.fork }}
-
+    # if: ${{ github.event.repository.fork }}
     steps:
       - name: Checkout target repo
         uses: actions/checkout@master
 
       - name: Sync Upstream
         uses: tgymnich/fork-sync@master
-        # with:
-        #   # target_repo_token: ${{ secrets.GITHUB_TOKEN }}
-        #   # upstream_sync_repo: ${{ env.UPSTREAM_REPO }}
-        #   ignore_fail: true
-        #   owner: AndrewLauu
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          #   # upstream_sync_repo: ${{ env.UPSTREAM_REPO }}
+          ignore_fail: true
+          owner: dani-garcia
         #   base: main
         #   head: main
