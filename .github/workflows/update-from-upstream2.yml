@@ -27,5 +27,5 @@ jobs:
           #   # upstream_sync_repo: ${{ env.UPSTREAM_REPO }}
           ignore_fail: true
           owner: dani-garcia
-        #   base: main
-        #   head: main
+          base: main
+          head: main
